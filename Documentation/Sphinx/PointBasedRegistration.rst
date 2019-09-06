@@ -76,6 +76,7 @@ We can apply a transformation computed with SimpleElastix to a point set with Si
     transformixImageFilter = sitk.TransformixImageFilter()
     transformixImageFilter.SetTransformParameterMap(elastixImageFilter.GetTransformParameterMap())
     transformixImageFilter.SetFixedPointSetFileName("fixedPointSet.pts")
+    transformixImageFilter.SetMovingImage(movingImage)
     transformixImageFilter.Execute()
 
 .. warning::
